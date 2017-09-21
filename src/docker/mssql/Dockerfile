@@ -1,5 +1,8 @@
 FROM microsoft/mssql-server-linux:latest
 
+ENV ACCEPT_EULA Y
+ENV SA_PASSWORD Pass@word1
+
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
