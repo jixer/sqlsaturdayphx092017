@@ -28,3 +28,7 @@ pendingRidesDataset$tip_probability = scoredData
 
 # Save the predictions back to SQL
 sqlUpdate(mychannel, pendingRidesDataset, tablename = "pending_rides", index = "medallion")
+
+
+# Close the channel
+close(mychannel)

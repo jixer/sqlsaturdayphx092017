@@ -46,3 +46,7 @@ modelbin <- serialize(logitObj, NULL)
 modelbinstr <- paste(modelbin, collapse = "")
 q <- paste("EXEC PersistModel @m='", modelbinstr, "'", sep = "")
 sqlQuery(mychannel, q)
+
+
+# Close the channel
+close(mychannel)

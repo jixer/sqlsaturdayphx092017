@@ -16,3 +16,7 @@ mychannel <- odbcConnect(dsn = "SqlMain", uid = "sa", pwd = "Pass@word1")
 #Keep in mind that dataset is just a reference to the result dataset from the SQL query.
 completedRidesQuery <- "select top 10 * from completed_rides";
 completedRidesDataset <- sqlQuery(channel = mychannel, query = completedRidesQuery)
+
+
+# Close the channel
+close(mychannel)
